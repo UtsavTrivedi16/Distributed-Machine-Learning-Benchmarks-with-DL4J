@@ -1,23 +1,23 @@
-# DeepLearning4J with Spark
+# About
 
- The following programs were written to explore Machine Learning using DL4J and Java API of Spark. 
+The following programs were written to explore Machine Learning using DL4J (DeepLearning4J) and Java API of Apache Spark. Benchmarks were created to compare speed of different processor architectures belonging to Intel and ARM for local as well as distributed processing. DL4J uses Apache Spark API to perform computations in a distributed manner. The testbench setup has a Desktop i7 Intel machine along with a cluster of 4 Raspberry Pi 4 SBCs.
 
- The model training and inference scripts are benchmarks, with results being used for the purposes of a Research Project
+The model training and inference scripts are benchmarks, with results being used for my Final Year Research Project at The University of Auckland. See each folder and script for details.
  
- See each folder and script for details.
+### Compile using Maven for Non-IDE Approach
+
+`mvn clean compile install`
  
- ### Compile using Maven for Non-IDE Approach
- `mvn clean compile install`
- 
-  ### Local Mode Command Example
-  
- `java -cp target/<jar-file> org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS2048`
+### Local Mode Command Example
+
+`java -cp target/<jar-file> org.dl4j.benchmarks.BenchMarkInferenceLocalModeHDFS2048`
  
  ### Distributed Command Example
  
- `spark-submit --class org.dl4j.benchmarks.BenchMarkInferenceDistributedHDFS8192 --master spark://afog-master:7077 --conf spark.executor.memory=2g --total-executor-cores=12 --executor-cores=4 target/deeplearning4j-example-sample-1.0.0-beta7-bin.jar`
+`spark-submit --class org.dl4j.benchmarks.BenchMarkInferenceDistributedHDFS8192 --master spark://afog-master:7077 --conf spark.executor.memory=2g --total-executor-cores=12 --executor-cores=4 target/deeplearning4j-example-sample-1.0.0-beta7-bin.jar`
  
  ### Notes
+ 
  1) As of the DL4J version in the pom.xml, CSV format datasets need headers to be removed if using CSVRecordReader. Skipping lines does not work and is a bug.
  2) Configure ram and cores according to requirements
  3) <jar-file-name>-bin.jar contains all the dependencies. Non bin/Non Uber jar files lack them and can be used to run programs in Spark Local Mode.
