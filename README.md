@@ -1,6 +1,6 @@
 # About
 
-The following programs were written to explore Machine Learning using DL4J (DeepLearning4J) and Java API of Apache Spark. Benchmarks were created to compare speed of different processor architectures belonging to Intel and ARM for local as well as distributed processing. DL4J uses Apache Spark API to perform computations in a distributed manner. The testbench setup has a Desktop i7 Intel machine along with a cluster of 4 Raspberry Pi 4 SBCs.
+The following programs were written to explore Machine Learning using DL4J (DeepLearning4J) and Java API of Apache Spark. Training and Inference benchmarks were created to compare speed of different processor architectures belonging to Intel and ARM for local as well as distributed processing. DL4J uses Apache Spark API to perform computations in a distributed manner. The testbench setup has a Desktop i7 Intel machine along with a cluster of 4 Raspberry Pi 4 SBCs.
 
 The model training and inference scripts are benchmarks, with results being used for my Final Year Research Project at The University of Auckland. See each folder and script for details.
  
